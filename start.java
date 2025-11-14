@@ -1,6 +1,22 @@
 import java.util.*;
- 
 public class start {
+
+    public static void save(String Student, String grade) {
+        try
+        {
+            java.io.PrintWriter writer = new java.io.PrintWriter(
+                new java.io.FileWriter("grades.txt",true)
+                );
+            writer.println(Student + " " + grade);
+            writer.close();
+            System.out.println("Dati saglabāti failā: grades.txt");
+        }
+        catch (Exception e) {
+            System.out.println("Kļūda saglabājot failu: " + e.getMessage());
+        }
+    }
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
  
@@ -49,6 +65,7 @@ public class start {
                 finalGrade += grades[s][i] * (weights[i] / 100.0);
             }
             System.out.printf("%s: %.2f%n", students[s], finalGrade);
+            save(String.format("Skolēns: %s", students[s]), String.format("%.2f", finalGrade));
         }
     }
 }
