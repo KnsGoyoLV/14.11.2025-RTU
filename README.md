@@ -15,4 +15,5 @@ Izmantojot java uztaisijām programmu, kura veica studentu gala vērtējuma apr�
 Komanda
 ├── Daniels Vidopskis
 ├── Jānis Lauris Links
+├── Renārs Gricjus
 ```
